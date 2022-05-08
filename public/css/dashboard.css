@@ -1,0 +1,337 @@
+body {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.ui-dashboard-card {
+  position: relative;
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff !important;
+  background-clip: border-box;
+  border-radius: 0.45rem;
+}
+
+.ui-card-header{
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  display: -ms-flexbox;
+  min-height: 45px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 0;
+  border-radius: 0.45rem 0.45rem 0 0;
+}
+
+.ui-card-header .ui-card-header-options{
+    margin-left: auto;
+}
+
+.ui-card-header .ui-card-title{
+  font-size: 16px !important;
+  margin-bottom: 0 !important;
+}
+
+.ui-card-body{
+  background-color: #fff;
+  margin: 0;
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.45rem;
+}
+
+.ui-card-footer{
+  background-color: #fff;
+  padding: 0.45rem 1rem;
+  display: flex;
+  display: -ms-flexbox;
+  min-height: 45px;
+  align-items: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  margin-top: 0;
+  border-radius: 0 0 0.45rem 0.45rem;
+}
+
+.ui-card-footer .ui-card-footer-options{
+  margin-left: auto;
+}
+
+/* overview */
+.overview-box .ui-card-body{
+  border-radius: 0.45rem;
+}
+
+.ui-dashboard-card .rwt__tablist{
+  background-color: #fff;
+  padding: 0 1rem;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 0;
+  border-radius: 0.45rem 0.45rem 0 0;
+  padding-top: 0.6rem;
+}
+
+.rwt__tab{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(0,0,0,0.45);
+    width: 11%;
+    padding: 0.3rem 0;
+}
+
+.rwt__tab[aria-selected="true"]{
+  color: #000;
+  border-bottom: 3px solid #007bff !important;
+}
+
+.frnd-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.frnd-box:last-child{
+  border-bottom: none !important;
+}
+
+.frnd-box img{
+  width: 45px;
+}
+
+.frnd-list{
+  height: 218px;
+  max-height: 218px;
+  min-height: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.frnd-list::-webkit-scrollbar{
+  width: 4px;
+  background: transparent;
+  display: none;
+}
+
+.frnd-list::-webkit-scrollbar-thumb{
+  width: 4px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.ui-dashboard-card:hover .frnd-list::-webkit-scrollbar{
+  display: block;
+}
+
+.empty-state{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.ui-form-box {
+  padding: 1rem 1.3rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 6px;
+}
+
+.todo-items .td-item {
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.todo-items {
+  margin-top: 0.8rem;
+}
+
+.custom-modal .modal-content{
+    border: none !important;
+    margin: 0 auto;
+}
+
+.custom-modal.rem-modal .modal-content{
+    width: 50%;
+}
+
+.custom-modal .modal-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.custom-modal .modal-box .modal-sidebar,
+.custom-modal .modal-box .modal-content-box{
+    height: 100%;
+    position: relative;
+}
+
+.custom-modal .modal-box .modal-sidebar{
+    width: 40%;
+}
+
+.custom-modal .modal-box .modal-content-box{
+    width: 60%;
+}
+
+.custom-modal.rem-modal .modal-box .modal-sidebar{
+  display: none;
+}
+
+.custom-modal.rem-modal .modal-box .modal-content-box{
+  width: 100%;
+}
+
+.custom-modal .modal-header-box{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0.65rem;
+}
+
+.custom-modal .modal-content-area{
+    margin-top: 1.2rem;
+}
+
+.custom-control .custom-control-label span{
+  position: relative;
+  top: 2px;
+}
+
+.custom-table td{
+  padding: 1rem 0.75rem;
+}
+
+.custom-table thead th{
+    border-top: none !important;
+    border-bottom: none !important;
+}
